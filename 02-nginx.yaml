@@ -1,6 +1,6 @@
 - name: install and start nginx
   hosts: frontend
-  become: yes
+  become: yes     # like -b
   tasks:
   - name: install nginx
     ansible.builtin.package:
@@ -12,6 +12,7 @@
       name: nginx
       state: started
       enabled: yes
-  
+
+
 
  
