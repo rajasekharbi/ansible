@@ -1,0 +1,21 @@
+- name: PLAY-01  #list 1
+  hosts: frontend
+  tasks:
+  - name: PLAY-01 and TASK-01
+    ansible.builtin.debug:   #echo == debug
+      msg: "Hello from PLAY-01 and TASK-01"
+
+  - name: PLAY-01 and TASK-02
+    ansible.builtin.debug:
+      msg: "Hello from PLAY-01 and TASK-02"
+
+- name: PLAY-02   #list 2
+  hosts: frontend
+  tasks:
+  - name: PLAY-02 and TASK-01
+    ansible.builtin.debug:
+      msg: "Hello from PLAY-02 and TASK-01"
+
+  - name: PLAY-02 and TASK-02
+    ansible.builtin.debug:
+      msg: "Hello from PLAY-02 and TASK-02"
