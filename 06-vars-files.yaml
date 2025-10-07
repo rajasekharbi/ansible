@@ -1,13 +1,9 @@
-- name: play level variables
+- name: varibles from files
   hosts: local   # connecting to inventory and checking local host
   connection: local # Ansible is connecting to localhost
-  vars:
-    COURSE: Devops aws
-    DURATION: 10HRS
-    Trainer: Sivakumar reddy
-  tasks:  #overwrite 
+  vars_files:
+  - course.yaml
+  tasks:   
   - name: print the course info
-    vars :
-     COURSE : ansible
     ansible.builtin.debug:   #echo == debug
       msg: "Course Name is: {{ COURSE }}, Duratioin: {{ DURATION }}, Trainer: {{ Trainer }}"
